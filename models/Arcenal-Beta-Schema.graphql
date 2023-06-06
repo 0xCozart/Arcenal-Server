@@ -1,0 +1,8 @@
+type ArcenalProfile @createModel(accountRelation:SINGLE, description: 'User profile for Arcenal.') {
+    userName: String! @string(minLength:3, maxLength:30)
+    invitees: [DID!, DID!]
+    accountCreated: DateTime
+    walletAddresses: [AccountID]
+    profilePictureURI: URI
+    backgroundPictureURI: URI
+}
